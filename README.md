@@ -31,16 +31,47 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 /* write all the steps invloved */
 
 **PROGRAM**
-
+```
+**UP Counter**
+module ex11(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @(posedge clk)
+begin
+   if (!rstn)
+	    out<=0;
+	else
+	    out<=out+1;
+end
+endmodule
+**DOWN COUNTER**
+module unit11(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @(posedge clk)
+begin
+   if (!rstn)
+	    out<=0;
+	else
+	    out<=out-1;
+end
+endmodule
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:D.BALA SUBRAMANYAM RegisterNumber:24002856
 */
-
+```
 **RTL LOGIC UP COUNTER**
+![image](https://github.com/user-attachments/assets/54ba1730-7b20-4b72-a338-0ae866c45f0f)
+![image](https://github.com/user-attachments/assets/a7fa91f6-f0a7-432a-ae38-cd847e00551f)
 
 **TIMING DIAGRAM FOR IP COUNTER**
+![image](https://github.com/user-attachments/assets/0365be5a-4f92-4f02-9cd1-dc9c726cc71b)
+![image](https://github.com/user-attachments/assets/92623a80-655a-45d3-a261-c29fbc1d67c2)
 
 **TRUTH TABLE**
 
+![image](https://github.com/user-attachments/assets/c9a98d98-5d9d-47ab-973d-60132fa22299)
+
 **RESULTS**
+Thus the 4 bit synchronous up counter and down counter are verified and the logic diagrams are designed the truth tables are verified .
